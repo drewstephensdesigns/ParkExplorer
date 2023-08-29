@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:paddingBottom="@dimen/row_padding"
+    android:paddingLeft="14dp"
+    android:paddingRight="14dp"
+    android:paddingTop="@dimen/row_padding"
+    android:focusable="true">
+
+
+
+    <TextView
+        android:id="@+id/parkFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Park Full Name"
+        android:fontFamily="@font/roboto_mono_medium"
+        android:textColor="?android:attr/colorControlNormal"
+        android:textSize="@dimen/park_full_name"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/parkCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/parkFullName"
+        android:fontFamily="@font/raleway"
+        android:textStyle="normal"
+        android:textSize="@dimen/park_state"
+        android:textColor="?android:attr/colorControlNormal" />
+
+    <TextView
+        android:id="@+id/parkStateLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/parkCategory"
+        android:fontFamily="@font/raleway"
+        android:textStyle="normal"
+        android:textSize="@dimen/park_state"
+        android:textColor="?android:attr/colorControlNormal" />
+
+    <TextView
+        android:id="@+id/parkDesignation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/parkStateLocation"
+        android:fontFamily="@font/raleway"
+        android:textStyle="normal"
+        android:textSize="@dimen/park_designation"
+        android:textColor="?android:attr/colorControlNormal" />
+
+    <TextView
+        android:id="@+id/parkActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/parkDesignation"
+        android:fontFamily="@font/raleway"
+        android:textStyle="normal"
+        android:textSize="@dimen/park_designation"
+        android:textColor="?android:attr/colorControlNormal" />
+
+    <TextView
+        android:id="@+id/dataName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/parkDesignation"
+        android:fontFamily="@font/raleway"
+        android:textStyle="normal"
+        android:textSize="@dimen/park_designation"
+        android:textColor="?android:attr/colorControlNormal" />
+
+</RelativeLayout>

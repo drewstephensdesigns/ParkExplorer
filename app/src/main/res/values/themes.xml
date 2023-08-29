@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ParkExplorer" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/light_background</item>
+        <item name="colorPrimaryVariant">@color/light_background</item>
+        <item name="colorOnPrimary">@color/light_background</item>
+        <item name="titleTextColor">@color/light_text_color</item>
+
+
+        <item name="android:colorControlNormal">@color/light_text_color</item>
+    </style>
+
+    <style name="Theme.ParkExplorer" parent="Base.Theme.ParkExplorer" />
+
+    <style name="Base.Theme.AppBarOverlay" parent="ThemeOverlay.AppCompat.DayNight" />
+    <style name="Base.Theme.PopupOverlay" parent="ThemeOverlay.AppCompat.DayNight" />
+</resources>

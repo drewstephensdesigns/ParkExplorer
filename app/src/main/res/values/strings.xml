@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ParkExplorer</string>
+
+    <!-- app actions (Example: menu selection) -->
+
+
+    <!-- Textview Strings -->
+    <string name="no_results">No results found for %1$s, please try again</string>
+
+
+
+    <!-- Textview Content Descriptions -->
+    <string name="no_results_cd">No results found when searching</string>
+
+
+</resources>

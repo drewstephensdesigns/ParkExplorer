@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dark_background">#2B4162</color> <!-- Indigo Blue -->
+    <color name="light_background">#EFEBEB</color> <!-- White -->
+    <color name="dark_text_color">#EFEBEB</color> <!-- White -->
+    <color name="light_text_color">#2B4162</color> <!-- Indigo Blue -->
+
+    <color name="light_accent_color">#8AA39B</color> <!-- Cambridge Blue -->
+    <color name="dark_accent_color">#95D9C3</color> <!-- Tiffany Green -->
+</resources>
