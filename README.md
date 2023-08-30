@@ -1,7 +1,15 @@
-# ParkExplorer
-WIP / Sample app utilizing the National Park Service API
+<div align="center">
+  <a href="">
+    <img src="artwork/mountain.png" alt="Logo" width="150" height="150">
+  </a>
+</div>
 
-Reference API at [National Park Service](https://developer.nps.gov/api/v1/topics/parks?&limit=100&api_key=nS9j5dUMcTGfi1EPgW3E62uzz4bmwdF2vquuj5DL)
+
+<h2 align="center">Park Explorer (Unofficial)</h2>
+<p align="center">Sample Android project utilizing the developer API from the National Park Service</p>
+
+
+
 
 
 
