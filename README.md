@@ -48,5 +48,5 @@ The following permissions are utilized in the app, nothing more.
 Additional information for these permissions can be found at https://developer.android.com/reference/android/Manifest.permission
 
 ### Attribution &amp; Acknowledgement
-- Mountain Icon by [FlatIcon](https://www.flaticon.com/)
+- [National Park icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/national-park)
 - Thank you to the [U.S National Park Service](https://www.nps.gov/index.htm) for having this publicly available API.  Learn more about their mission by clicking the link!
