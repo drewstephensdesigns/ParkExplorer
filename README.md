@@ -1,6 +1,6 @@
 <div align="center">
   <a href="">
-    <img src="artwork/mountain.png" alt="Logo" width="150" height="150">
+    <img src="artwork/national-park.png" alt="Logo" width="200 height="200">
   </a>
 </div>
 
