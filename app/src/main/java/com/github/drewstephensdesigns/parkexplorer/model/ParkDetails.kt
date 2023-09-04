@@ -2,13 +2,6 @@ package com.github.drewstephensdesigns.parkexplorer.model
 
 import com.google.gson.annotations.SerializedName
 
-data class DataClass(
-    val total: Int,
-    val limit: Int,
-    val start: Int,
-    val data: List<Data>
-)
-
 data class Data(
     val id: String,
     val name: String,
@@ -20,11 +13,11 @@ data class Park(
     val states: String,
     @SerializedName("parkCode")
     val parkCode: String,
-    @SerializedName("parkCode")
+    @SerializedName("designation")
     val designation: String,
-    @SerializedName("parkCode")
+    @SerializedName("fullName")
     val fullName: String,
-    @SerializedName("parkCode")
+    @SerializedName("url")
     val url: String,
     @SerializedName("name")
     val name: String
