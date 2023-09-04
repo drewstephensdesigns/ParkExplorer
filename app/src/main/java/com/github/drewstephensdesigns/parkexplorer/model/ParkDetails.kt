@@ -2,26 +2,30 @@ package com.github.drewstephensdesigns.parkexplorer.model
 
 import com.google.gson.annotations.SerializedName
 
-data class Park(
-    @SerializedName("id")
-    val id: String,
-    @SerializedName("name")
-    val name: String,
-    @SerializedName("parks")
-    val parks: List<ParkDetails>
+data class DataClass(
+    val total: Int,
+    val limit: Int,
+    val start: Int,
+    val data: List<Data>
 )
 
-data class ParkDetails(
+data class Data(
+    val id: String,
+    val name: String,
+    val parks: List<Park>
+)
+
+data class Park(
     @SerializedName("states")
     val states: String,
     @SerializedName("parkCode")
     val parkCode: String,
-    @SerializedName("designation")
+    @SerializedName("parkCode")
     val designation: String,
-    @SerializedName("fullName")
+    @SerializedName("parkCode")
     val fullName: String,
-    @SerializedName("url")
+    @SerializedName("parkCode")
     val url: String,
-    @SerializedName("parkName")
-    val parkName: String
+    @SerializedName("name")
+    val name: String
 )

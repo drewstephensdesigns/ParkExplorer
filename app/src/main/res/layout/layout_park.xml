@@ -15,7 +15,7 @@
         android:id="@+id/parkFullName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Park Full Name"
+        android:text="@string/park_name_placeholder"
         android:fontFamily="@font/roboto_mono_medium"
         android:textColor="?android:attr/colorControlNormal"
         android:textSize="@dimen/park_full_name"
@@ -53,16 +53,6 @@
 
     <TextView
         android:id="@+id/parkActivity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/parkDesignation"
-        android:fontFamily="@font/raleway"
-        android:textStyle="normal"
-        android:textSize="@dimen/park_designation"
-        android:textColor="?android:attr/colorControlNormal" />
-
-    <TextView
-        android:id="@+id/dataName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/parkDesignation"

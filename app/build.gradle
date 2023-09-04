@@ -2,10 +2,15 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-android'
-
 }
 
 android {
+    // Load properties file containing our API key
+    // Source: https://stackoverflow.com/a/76351043/19886560
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+    def apikey = properties.getProperty('key')
+
     namespace 'com.github.drewstephensdesigns.parkexplorer'
     compileSdk 34
 
@@ -17,6 +22,9 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // Hides API key from version control
+        buildConfigField "String" , "API_KEY" ,  apikey
     }
 
     buildTypes {
@@ -34,6 +42,7 @@ android {
     }
     buildFeatures {
         viewBinding true
+        buildConfig true
     }
 }
 
@@ -62,4 +71,11 @@ dependencies {
 
     // volley http library
     implementation 'com.android.volley:volley:1.2.1'
+
+    // Sheets - https://github.com/maxkeppeler/sheets
+    def sheets_version = "2.3.1"
+    implementation "com.maxkeppeler.sheets:core:$sheets_version"
+    implementation "com.maxkeppeler.sheets:info:$sheets_version"
+    implementation "com.maxkeppeler.sheets:option:$sheets_version"
+    implementation "com.maxkeppeler.sheets:input:$sheets_version"
 }

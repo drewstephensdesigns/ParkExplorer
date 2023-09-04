@@ -68,6 +68,21 @@
         android:scrollbars="vertical"
         app:fastScrollEnabled="false" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/topicFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/park_filter"
+        android:theme="@style/FabExtendedMaterialTheme"
+        app:srcCompat="@drawable/ic_filter_list"
+        app:iconTint="?android:colorControlNormal" />
+
     <!--
      android:scrollbarThumbVertical="@drawable/thumb_drawable"
     app:fastScrollHorizontalThumbDrawable="@drawable/thumb_drawable"
