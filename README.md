@@ -11,7 +11,8 @@
 
 
 ### Developer Access
-Get you API Key at [National Park Service Developer Resources](https://www.nps.gov/subjects/developer/get-started.htm).  Set up your own API key to API_KEY in utils/Config.kt
+Get you API Key at [National Park Service Developer Resources](https://www.nps.gov/subjects/developer/get-started.htm).  
+Set up your own API key to "key" in ```local.properties``` file
 
 
 ### Attribution &amp; Acknowledgement
