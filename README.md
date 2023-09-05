@@ -23,11 +23,11 @@ Clone the repo
    ```
 
 ### Purpose
-Allows users to view a list of parks by varying topics.  Currently defaults to ```Laborer and Worker```.  [FloatingActionButton](https://developer.android.com/reference/com/google/android/material/floatingactionbutton/FloatingActionButton) allows the user to select a different park topic.  The JSON response is then returned with National Park Service properties matching the criteria.  For the purpose of this app, only the first 40 topics are shown.  The user can click on a park detail: this will open a web browser to the corresponding park page of the National Park Service.
+Allows users to view a list of parks by varying topics.  Currently defaults to ```Laborer and Worker```.  [FloatingActionButton](https://developer.android.com/reference/com/google/android/material/floatingactionbutton/FloatingActionButton) allows the user to select a different park topic.  The JSON response is then returned with National Park Service properties matching the criteria.  For the purpose of this app, only the first 40 topics are shown.  The user can click on a park detail: this will open a web browser to the corresponding park page of the National Park Service.  To see the topics used check out [```ParkTopics.md```](https://github.com/drewstephensdesigns/ParkExplorer/blob/6bfced3b23c37c8353c0f64d580f315f2746fc6d/ParkTopics.md)
 
 ### Developer Access
 Get you API Key at [National Park Service Developer Resources](https://www.nps.gov/subjects/developer/get-started.htm).  
-Set up your own API key to "key" in ```local.properties``` file
+Set up your own API key to "key" in ```local.properties``` file.  This file should be setup as part of the .gitignore within Android Studio/Version Control
 
 ### Built With 🛠
 - [Kotlin](https://kotlinlang.org/) - First class and official programming language for Android development.
