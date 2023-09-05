@@ -9,8 +9,20 @@
     android:paddingTop="@dimen/row_padding"
     android:focusable="true">
 
-
-
+    <!--
+    <ImageView
+        android:id="@+id/imageHolder"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:visibility="visible"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/row_padding"
+        android:src="@drawable/ic_filter_list"
+        android:background="@color/light_accent_color"
+        android:contentDescription="image" />
+-->
+    <!-- Full Name of Park -->
+    <!-- android:layout_toEndOf="@id/imageHolder"-->
     <TextView
         android:id="@+id/parkFullName"
         android:layout_width="wrap_content"
@@ -21,44 +33,51 @@
         android:textSize="@dimen/park_full_name"
         android:textStyle="bold" />
 
+
     <TextView
-        android:id="@+id/parkCategory"
+        android:id="@+id/parkShortName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/parkFullName"
         android:fontFamily="@font/raleway"
         android:textStyle="normal"
+        android:text="@string/park_shortname_placeholder"
         android:textSize="@dimen/park_state"
         android:textColor="?android:attr/colorControlNormal" />
 
+    <!-- Location of Park -->
     <TextView
         android:id="@+id/parkStateLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/parkCategory"
+        android:layout_below="@id/parkShortName"
         android:fontFamily="@font/raleway"
         android:textStyle="normal"
+        android:text="@string/park_location_placeholder"
         android:textSize="@dimen/park_state"
         android:textColor="?android:attr/colorControlNormal" />
 
+    <!-- Category of Park (Ex: National Monument) -->
     <TextView
         android:id="@+id/parkDesignation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/parkStateLocation"
         android:fontFamily="@font/raleway"
+        android:text="@string/park_designation_placeholder"
         android:textStyle="normal"
         android:textSize="@dimen/park_designation"
         android:textColor="?android:attr/colorControlNormal" />
 
+    <!-- Park Code -->
     <TextView
-        android:id="@+id/parkActivity"
+        android:id="@+id/parkCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/parkDesignation"
         android:fontFamily="@font/raleway"
+        android:text="@string/park_code_placeholder"
         android:textStyle="normal"
         android:textSize="@dimen/park_designation"
         android:textColor="?android:attr/colorControlNormal" />
-
 </RelativeLayout>

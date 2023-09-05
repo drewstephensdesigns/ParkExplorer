@@ -19,12 +19,15 @@ class ParkAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             val parkAllInfo = parks[position]
-            holder.apply {
+
+        holder.apply {
                 parkFullName.text = parkAllInfo.fullName
-                parkCategory.text = parkAllInfo.name
+                parkShortName.text = parkAllInfo.name
                 parkStateLocation.text = parkAllInfo.states
                 parkDesignation.text = parkAllInfo.designation
+                parkCode.text = parkAllInfo.parkCode
             }
+
     }
 
     override fun getItemCount(): Int = parks.size
@@ -44,11 +47,14 @@ class ParkAdapter(
                 listener.onParkClickListener(parks[bindingAdapterPosition])
             }
         }
+
+        //var npsImage: ImageView = binding.imageHolder
         var parkFullName: TextView = binding.parkFullName
+        var parkShortName: TextView = binding.parkShortName
         var parkStateLocation: TextView = binding.parkStateLocation
         var parkDesignation: TextView = binding.parkDesignation
-        var parkCategory: TextView = binding.parkCategory
 
+        var parkCode: TextView = binding.parkCode
     }
 
     interface ParkAdapterListener {

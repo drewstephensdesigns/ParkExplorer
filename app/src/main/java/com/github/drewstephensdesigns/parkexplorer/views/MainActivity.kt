@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -59,7 +58,10 @@ class MainActivity : AppCompatActivity(), ParkAdapter.ParkAdapterListener {
             )
         }
 
+        // Initial Fetching
         fetchParkData()
+
+        // Bottom Sheet for cleaner look
         bottomSheet()
     }
 
@@ -73,6 +75,8 @@ class MainActivity : AppCompatActivity(), ParkAdapter.ParkAdapterListener {
 
                 with(InputSpinner {
                     label("Select a Topic from the dropdown")
+
+                    // Original Code
                     options(
                         // First 40 topics
                         mutableListOf(
@@ -116,180 +120,67 @@ class MainActivity : AppCompatActivity(), ParkAdapter.ParkAdapterListener {
                             "Hispanic American Heritage",
                             "Immigration",
                             "Impact Craters",
+                            "Incarceration",
+                            "Industry",
+                            "LGBTQ Industry",
+                            "Laborer and Worker",
+                            "Lakes",
+                            "Landscape Design"
                         )
-                    )
+                 )
 
                     // Changes the JSON response when user selects a topic
                     // Only showing first 40 topics for clarity
+                    val topics = mapOf(
+                        0 to "African American Heritage",
+                        1 to "American Revolution",
+                        2 to "Ancient Seas",
+                        3 to "Animals",
+                        4 to "Archeology",
+                        5 to "Architecture and Building",
+                        6 to "Arctic",
+                        7 to "Arts",
+                        8 to "Asian American Heritage",
+                        9 to "Aviation",
+                        10 to "Banking",
+                        11 to "Birthplace",
+                        12 to "Burial, Cemetery, and Gravesite",
+                        13 to "Canyons and Canyonlands",
+                        14 to "Caves, Caverns, and Karst",
+                        15 to "Climate Change",
+                        16 to "Coasts, Islands, and Atolls",
+                        17 to "Colonization and Settlement",
+                        18 to "Commerce",
+                        19 to "Dams",
+                        20 to "Dunes",
+                        21 to "Engineering",
+                        22 to "Enslavement",
+                        23 to "Estuaries and Mangroves",
+                        24 to "Explorers and Expeditions",
+                        25 to "Farming and Agriculture",
+                        26 to "Fire",
+                        27 to "Foothills, Plains, and Valleys",
+                        28 to "Forests and Woodlands",
+                        29 to "Forts",
+                        30 to "Fossils and Paleontology",
+                        31 to "Geology",
+                        32 to "Geothermal",
+                        33 to "Glaciers",
+                        34 to "Grasslands",
+                        35 to "Great Depression",
+                        36 to "Groundwater",
+                        37 to "Hispanic American Heritage",
+                        38 to "Immigration",
+                        39 to "Impact Craters",
+                        40 to "Incarceration",
+                        41 to "Industry",
+                        42 to "LGBTQ Industry",
+                        43 to "Laborer and Worker",
+                        44 to "Lakes",
+                        45 to "Landscape Design"
+                    )
                     changeListener { value ->
-                        when (value) {
-                            0 -> {
-                                onTopicSelected("African American Heritage")
-                            }
-
-                            1 -> {
-                                onTopicSelected("American Revolution")
-                            }
-
-                            2 -> {
-                                onTopicSelected("Ancient Seas")
-                            }
-
-                            3 -> {
-                                onTopicSelected("Animals")
-                            }
-
-                            4 -> {
-                                onTopicSelected("Archeology")
-                            }
-
-                            5 -> {
-                                onTopicSelected("Architecture and Building")
-                            }
-
-                            6 -> {
-                                onTopicSelected("Arctic")
-                            }
-
-                            7 -> {
-                                onTopicSelected("Arts")
-                            }
-
-                            8 -> {
-                                onTopicSelected("Asian American Heritage")
-                            }
-
-                            9 -> {
-                                onTopicSelected("Aviation")
-                            }
-
-                            10 -> {
-                                onTopicSelected("Banking")
-                            }
-
-                            11 -> {
-                                onTopicSelected("Birthplace")
-                            }
-
-                            12 -> {
-                                onTopicSelected("Burial, Cemetary and Gravesite")
-                            }
-
-                            13 -> {
-                                onTopicSelected("Canyons and Canyonlands")
-                            }
-
-                            14 -> {
-                                onTopicSelected("Caves, Caverns and Karst")
-                            }
-
-                            15 -> {
-                                onTopicSelected("Climate Change")
-                            }
-
-                            16 -> {
-                                onTopicSelected("Coasts, Islands and Atolls")
-                            }
-
-                            17 -> {
-                                onTopicSelected("Colonization and Settlement")
-                            }
-
-                            18 -> {
-                                onTopicSelected("Commerce")
-                            }
-
-                            19 -> {
-                                onTopicSelected("Dams")
-                            }
-
-                            20 -> {
-                                onTopicSelected("Dunes")
-                            }
-
-                            21 -> {
-                                onTopicSelected("Engineering")
-                            }
-
-                            22 -> {
-                                onTopicSelected("Enslavement")
-                            }
-
-                            23 -> {
-                                onTopicSelected("Estuaries and Mangroves")
-                            }
-
-                            24 -> {
-                                onTopicSelected("Explorers and Expeditions")
-                            }
-
-                            25 -> {
-                                onTopicSelected("Farming and Agriculture")
-                            }
-
-                            26 -> {
-                                onTopicSelected("Fire")
-                            }
-
-                            27 -> {
-                                onTopicSelected("Foothills, Plains and Valleys")
-                            }
-
-                            28 -> {
-                                onTopicSelected("Forests and Woodlands")
-                            }
-
-                            29 -> {
-                                onTopicSelected("Forts")
-                            }
-
-                            30 -> {
-                                onTopicSelected("Fossils and Paleontology")
-                            }
-
-                            31 -> {
-                                onTopicSelected("Geology")
-                            }
-
-                            32 -> {
-                                onTopicSelected("Geothermal")
-                            }
-
-                            33 -> {
-                                onTopicSelected("Glaciers")
-                            }
-
-                            34 -> {
-                                onTopicSelected("Grasslands")
-                            }
-
-                            35 -> {
-                                onTopicSelected("Great Depression")
-                            }
-
-                            36 -> {
-                                onTopicSelected("Groundwater")
-                            }
-
-                            37 -> {
-                                onTopicSelected("Hispanic American Heritage")
-                            }
-
-                            38 -> {
-                                onTopicSelected("Immigration")
-                            }
-
-                            39 -> {
-                                onTopicSelected("Impact Craters")
-                            }
-
-                            40 -> {
-                                onTopicSelected("Incarceration")
-                            }
-                            else -> {
-                                //onTopicSelected("Oceans")
-                            }
-                        }
+                        topics[value]?.let { onTopicSelected(it) }
                     }
                 })
             }
@@ -327,16 +218,13 @@ class MainActivity : AppCompatActivity(), ParkAdapter.ParkAdapterListener {
     private fun onTopicSelected(topic: String) {
         selectedTopic = topic
         fetchParkData() // Fetch data for the selected topic
+        _binding.mainToolBar.title = topic
     }
 
     private fun parseParksData(response: String): List<Data> {
         val parksList = ArrayList<Data>()
 
         val jsonObject = JSONObject(response)
-
-        val total = jsonObject.getString("total")
-        val limit = jsonObject.getString("limit")
-        val start = jsonObject.getString("start")
 
         val jsonArray = jsonObject.getJSONArray("data")
 
@@ -349,12 +237,12 @@ class MainActivity : AppCompatActivity(), ParkAdapter.ParkAdapterListener {
             val parksArray = parkObject.getJSONArray("parks")
             for (j in 0 until parksArray.length()) {
                 val parkDetailsObject = parksArray.getJSONObject(j)
-                val states = parkDetailsObject.getString("states")
-                val parkCode = parkDetailsObject.getString("parkCode")
-                val designation = parkDetailsObject.getString("designation")
                 val fullName = parkDetailsObject.getString("fullName")
-                val parkUrl = parkDetailsObject.getString("url")
                 val parkName = parkDetailsObject.getString("name")
+                val states = parkDetailsObject.getString("states")
+                val designation = parkDetailsObject.getString("designation")
+                val parkCode = parkDetailsObject.getString("parkCode")
+                val parkUrl = parkDetailsObject.getString("url")
 
                 parkDetailsList.add(
                     Park(
@@ -371,10 +259,10 @@ class MainActivity : AppCompatActivity(), ParkAdapter.ParkAdapterListener {
             val parkData = Data(id, name, parkDetailsList)
             parksList.add(parkData)
         }
-        Log.i("PARSE PARKS", "Total Is: $total+ Limit Is: $limit+ Start Is: $start")
         return parksList
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private fun updateRecyclerView(parksList: List<Park>) {
         parkAdapter = ParkAdapter(parksList, this)
         _binding.recyclerView.adapter = parkAdapter
@@ -383,8 +271,8 @@ class MainActivity : AppCompatActivity(), ParkAdapter.ParkAdapterListener {
     }
 
 
+    // Opens NPS webpage of corresponding park
     override fun onParkClickListener(p: Park) {
-        //Toast.makeText(applicationContext, "Clicked on: " + p.fullName, Toast.LENGTH_SHORT).show()
         val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(p.url))
         startActivity(browserIntent)
     }

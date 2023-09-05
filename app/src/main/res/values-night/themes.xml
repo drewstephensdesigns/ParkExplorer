@@ -6,12 +6,18 @@
         <item name="colorPrimaryVariant">@color/dark_background</item>
         <item name="colorOnPrimary">@color/dark_background</item>
         <item name="titleTextColor">@color/dark_text_color</item>
-
-
         <item name="android:colorControlNormal">@color/dark_text_color</item>
+
+        <!-- Bottom Sheet Styles -->
+        <!-- Source: https://github.com/maxkeppeler/sheets#appearance-->
+        <item name="sheetsTitleColor">@color/light_accent_color</item>
+        <item name="sheetsContentColor">@color/light_accent_color</item>
+        <item name="sheetsButtonColor">@color/light_accent_color</item>
+        <item name="sheetsTitleFont">@font/raleway</item>
     </style>
+
     <style name="FabExtendedMaterialTheme" parent="Theme.Material3.Light.NoActionBar">
-        <item name="android:backgroundTint">@color/dark_accent_color</item>
+        <item name="android:backgroundTint">@color/light_accent_color</item>
     </style>
 
 </resources>
